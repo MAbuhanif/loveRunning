@@ -78,3 +78,45 @@ main{
     flex: 1 0 auto;
     margin-top: 47px;
 }
+/* footer */
+footer{
+    background-color: red;
+}
+/* media query: for Tablet and large(768px and up) */
+@media screen and (min-width:768px) {
+    /* header */
+    nav{
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+    #menu{
+        display: flex;
+        
+       
+    }
+    #menu >li{
+        padding-left: 1rem;
+    }
+    .nav-toggle-lable{
+        display: none;
+    }
+    #logo{
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+    /* Main content */
+    main{
+        /* push main content down to accomodate large header */
+        margin-top: 79px;
+    }
+}
+/* media query for large device (laptop and desktop size of 992px and up) */
+@media screen and (min-width: 992px){
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
+}
