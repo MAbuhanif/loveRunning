@@ -27,6 +27,9 @@ h3 {
     color: #252525;
 
 }
+.hidden-heading{
+    display: none;
+}
 
 /* header */
 header {
@@ -90,8 +93,6 @@ nav {
 
 /* main content */
 main {
-
-
     /* make main element take up any surplus */
     flex: 1 0 auto;
     margin-top: 47px;
@@ -149,11 +150,42 @@ main {
 }
 
 #circle-cover-bg {
-    background: url(../images/reasons-image.webp) no-repeat top center / cover;
-    height: 90vh;
-    width: 90vh;
+    background: url(../images/reasons-image.webp) no-repeat top center/cover;
+    height: 90vw;
+    width: 90vw;
     margin-bottom: 20px;
+    /* to make the square image circle */
+    border-radius: 50%;
+    max-width: 300px;
+    max-height: 300px;
 }
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* meet-up section */
+#times{
+    display: flex;
+    background: url(../images/dublin-city.webp) no-repeat center/cover;
+    flex-wrap: wrap;
+}
+#times div{
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 15px;
+    text-align: center;
+    /* this will not wrap on screens less than 400px */
+    flex-basis: 200px;
+    flex-grow: 1;
+    border: 2px solid white;
+}
+#times h3{
+    /* override the heading color set in general style */
+    color: #fafafa;
+}
+
 
 /* footer */
 #social-links {
@@ -213,11 +245,61 @@ main {
         width: 300px;
         right: 50px;
     }
+
+    /* Reason section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #benefits-physical>div,
+    #benefits-mental>div {
+        width: 75%;
+
+    }
+
+    #benefits-mental>div {
+        align-self: flex-end;
+        text-align: end;
+
+    }
 }
 
 /* media query for large device (laptop and desktop size of 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+/* media quary for large devices(size 1200px and wider) */
+@media screen and (min-width: 1200px) {
+    #benefits {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
     }
 }
