@@ -217,12 +217,13 @@ main {
 }
 
 /* media query for gallery images */
-@media screen and (min-width:576px){
-    #photos{
+@media screen and (min-width:576px) {
+    #photos {
         column-count: 2;
         column-gap: 0;
     }
 }
+
 /* media query: for Tablet and large(768px and up) */
 @media screen and (min-width:768px) {
 
@@ -286,8 +287,9 @@ main {
         text-align: end;
 
     }
+
     /* gallarey page */
-    #photos{
+    #photos {
         column-count: 3;
         column-gap: 0;
     }
@@ -298,7 +300,8 @@ main {
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
-    #photos{
+
+    #photos {
         column-count: 4;
         column-gap: 0;
     }
